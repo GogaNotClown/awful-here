@@ -1,0 +1,87 @@
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap';
+
+$black: #111111;
+$white: #FFFFFF;
+$hover-white: rgba(255, 255, 255, .5);
+$dark-body: rgba(0, 0, 0, .5);
+$font: 'Montserrat', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: $font;
+}
+
+body {
+  position: relative;
+  background-color: $black;
+  color: $white;
+  background-image: url("../img/body.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $dark-body;
+    z-index: -1;
+  }
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.container {
+  max-width: 900px;
+  padding: 20px;
+}
+
+.hero-avatar {
+  max-width: 175px;
+  max-height: 175px;
+  border-radius: 50%;
+}
+
+.hero-title {
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 5px 0 10px;
+  font-weight: 600;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-icon {
+  font-size: 1.3rem;
+  color: $white;
+}
+
+.social-link {
+  transition: color .3s ease-in-out;
+
+  &:hover {
+    color: $hover-white;
+  }
+}
